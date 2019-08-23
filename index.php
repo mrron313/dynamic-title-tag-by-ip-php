@@ -4,9 +4,11 @@
 
 <?php include 'header.php';
 
-    ch_title("Dashboard");
+    $details = getClientIpDetails();
 
-    getClientIpDetails();
+    $details = json_decode($details, true);
+    
+    ch_title($details["CountryName"]);
 ?>
 
 <?php include 'footer.php';?>

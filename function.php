@@ -34,7 +34,8 @@ function get_client_ip()
 
 function getClientIpDetails()
 {
-    $PublicIP = get_client_ip();
+    // $PublicIP = get_client_ip();
+    $PublicIP = '103.86.109.8';
 
     $url = 'https://api.snoopi.io/'. $PublicIP;
     $ch = curl_init();
@@ -54,7 +55,6 @@ function getClientIpDetails()
         echo "Failed to get contents.";
         $contents = '';
     }
-
 
     return $contents;
 }
